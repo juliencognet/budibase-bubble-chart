@@ -14,7 +14,7 @@
           {
             "type": "dataProvider",
             "label": "Item Provider",
-            "key": "itemDataProvider",
+            "key": "dataProvider",
             "required": true
           },
           {
@@ -28,14 +28,6 @@
             "label": "x axis field",
             "key": "xAxisField",
             "required": true
-          },
-          {
-            "type": "select",
-            "label": "x axis type",
-            "key": "xAxisType",
-            "required": true,
-            "default": "category",
-            "options": ["category","numeric","datetime"]
           },
           {
             "type": "field",
@@ -63,6 +55,12 @@
             "defaultValue": 300
           },
           {
+            "type": "number",
+            "label": "Chart width",
+            "key": "chartWidth",
+            "info": "If left null, width will be 100%"
+          },          
+          {
             "type": "text",
             "label": "Chart title",
             "key": "chartTitle"
@@ -87,11 +85,6 @@
             "type": "number",
             "label": "Number of ticks of X axis",
             "key": "xAxisTickAmount"
-          },
-          {
-            "type": "text",
-            "label": "Title of X axis",
-            "key": "xAxisTitle"
           }
         ]
       },
