@@ -33,7 +33,7 @@
   }
   options.xaxis = { type: xAxisType };
   if (xAxisTitle){
-    options.xaxis.title = { text: xAxisTitle, offsetY: +120 };
+    options.xaxis.title = { text: xAxisTitle, offsetY: +80 };
   }
   if (minXAxis){
     options.xaxis.min = minXAxis;
@@ -87,6 +87,7 @@
         }
         options.series[index].data.push({x:element[xAxisField],y:element[yAxisField],z:element[bubbleSizeField]});
     };
+    console.log(options);
   }
 </script>
 
