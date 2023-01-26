@@ -1,0 +1,158 @@
+{
+  "type": "component",
+  "metadata": {},
+  "schema": {
+    "name": "budibase-bubble-chart",
+    "friendlyName": "budibase-bubble-chart",
+    "description": "Component to display a bubble chart",
+    "icon": "GraphBubble",
+    "settings": [
+      {
+        "section": true,
+        "name": "Data Mapping",
+        "settings": [
+          {
+            "type": "dataProvider",
+            "label": "Item Provider",
+            "key": "itemDataProvider",
+            "required": true
+          },
+          {
+            "type": "field",
+            "label": "Serie category column",
+            "key": "serieField",
+            "info": "If left null, there will be only one DEFAULT category"
+          },
+          {
+            "type": "field",
+            "label": "x axis field",
+            "key": "xAxisField",
+            "required": true
+          },
+          {
+            "type": "select",
+            "label": "x axis type",
+            "key": "xAxisType",
+            "required": true,
+            "default": "category",
+            "options": ["category","numeric","datetime"]
+          },
+          {
+            "type": "field",
+            "label": "y axis field",
+            "key": "yAxisField",
+            "required": true
+          },
+          {
+            "type": "field",
+            "label": "Bubble Size field",
+            "key": "bubbleSizeField",
+            "required": true
+          }
+        ]
+      },
+      {
+        "section": true,
+        "name": "General options",
+        "settings": [
+          {
+            "type": "number",
+            "label": "Chart height",
+            "key": "chartHeight",
+            "required": true,
+            "defaultValue": 300
+          },
+          {
+            "type": "text",
+            "label": "Chart title",
+            "key": "chartTitle"
+          }
+        ]
+      },      
+      {
+        "section": true,
+        "name": "X axis definition",
+        "settings": [
+          {
+            "type": "number",
+            "label": "Minimum value of X axis",
+            "key": "minXAxis"
+          },
+          {
+            "type": "number",
+            "label": "Maximum value of X axis",
+            "key": "maxXAxis"
+          },
+          {
+            "type": "number",
+            "label": "Number of ticks of X axis",
+            "key": "xAxisTickAmount"
+          },
+          {
+            "type": "text",
+            "label": "Title of X axis",
+            "key": "xAxisTitle"
+          }
+        ]
+      },
+      {
+        "section": true,
+        "name": "Y axis definition",
+        "settings": [
+          {
+            "type": "number",
+            "label": "Minimum value of Y axis",
+            "key": "minYAxis"
+          },
+          {
+            "type": "number",
+            "label": "Maximum value of Y axis",
+            "key": "maxYAxis"
+          },
+          {
+            "type": "number",
+            "label": "Number of ticks of Y axis",
+            "key": "yAxisTickAmount"
+          },
+          {
+            "type": "text",
+            "label": "Title of Y axis",
+            "key": "yAxisTitle"
+          }
+        ]
+      },      
+      {
+        "section": true,
+        "name": "Advanced options",
+        "settings": [
+          {
+            "type": "boolean",
+            "label": "Display of bubble values",
+            "key": "displayValues",
+            "defaultValue": false
+          },
+          {
+            "type": "number",
+            "label": "Opacity of bubbles (percentage from 0 to 100)",
+            "key": "bubbleOpacity",
+            "defaultValue": 80
+          },
+          {
+            "type": "text",
+            "label": "Advanced chart options",
+            "key": "advancedChartOptions",
+            "info": "Must be Javascript valid object (cf. https://apexcharts.com/docs/options)"
+          },
+          {
+            "type": "select",
+            "label": "Color palette",
+            "key": "colorPalette",
+            "required": true,
+            "default": "1",
+            "options": ["palette1","palette2","palette3","palette4","palette5","palette6","palette7","palette8","palette9","palette10"]
+          }
+        ]
+      }
+    ]
+  }
+}
