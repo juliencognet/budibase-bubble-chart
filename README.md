@@ -1,5 +1,9 @@
 # Budibase-bubble-chart
-This is a readme for your new Budibase plugin.
+This is a budibase component plugin. It allows to add a bubble chart to your application.
+This component must be added to an existant datasource and requires several mandatory fields:
+- x axis field can be a string, a numeric or options field
+- y axis field which must be a numeric field
+- bubbleSizeField which must be a numeric field
 
 # Description
 Component to display a bubble chart
@@ -7,7 +11,6 @@ Component to display a bubble chart
 Find out more about [Budibase](https://github.com/Budibase/budibase).
 
 ## Instructions
-
 To build your new  plugin run the following in your Budibase CLI:
 ```
 budi plugins --build
