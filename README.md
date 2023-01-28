@@ -6,6 +6,8 @@ This component must be added to an existant datasource and requires several mand
 - bubbleSizeField which must be a numeric field
 Have fun with this new component.
 
+![](./bubble_screenshot.PNG)
+
 # Description
 Component to display a bubble chart
 
