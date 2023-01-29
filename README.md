@@ -4,7 +4,7 @@ This component must be added to an existant datasource and requires several mand
 - x axis field can be a string, a numeric or options field
 - y axis field which must be a numeric field
 - bubbleSizeField which must be a numeric field
-Have fun with this new component.
+Have fun with this new component !
 
 ![](./bubble_screenshot.PNG)
 
