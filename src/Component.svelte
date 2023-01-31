@@ -121,6 +121,7 @@
     let index=0;
     if (rows){
       for (const element of rows){
+        try{
           // Manage serie if defined (else will be DEFAULT value)
           if (serieField == null){
             index=0;
@@ -141,6 +142,9 @@
                 ,z:element[bubbleSizeField]});
             }
           }
+        } catch (Exception){
+          console.log("Could not add element to the bubble chart")
+        }
       };
     }
   }
