@@ -1,6 +1,6 @@
 {
   "name": "budibase-bubble-chart",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Component to display a bubble chart",
   "license": "MIT",
   "svelte": "index.js",
