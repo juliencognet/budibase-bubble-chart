@@ -134,10 +134,12 @@
           // If no value defined for x axis, but that axis if category type, then we can do something, else value will be ignored
           if (element[xAxisField]!==undefined || options.xaxis.type=="category") {
             let xValue = (element[xAxisField]===undefined) ? "<undefined>" : element[xAxisField]
-            options.series[index].data.push(
-              {x: xValue
-              ,y:element[yAxisField]
-              ,z:element[bubbleSizeField]});
+            if (xValue != null && element[yAxisField] && element[bubbleSizeField] != null){
+              options.series[index].data.push(
+                {x: xValue
+                ,y:element[yAxisField]
+                ,z:element[bubbleSizeField]});
+            }
           }
       };
     }
