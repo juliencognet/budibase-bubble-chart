@@ -1,5 +1,5 @@
 <script>
-  import { getContext } from "svelte"
+  import { getContext,afterUpdate } from "svelte"
   import { chart } from "svelte-apexcharts";
   import { merge } from 'lodash';
   
@@ -119,6 +119,7 @@
   // Handle data when rows retrieved
   function handleData(rows){
     let index=0;
+    options.series=[];
     if (rows){
       for (const element of rows){
         try{
@@ -148,12 +149,16 @@
       };
     }
   }
-  $: rows = $loading
-    ? new Array(dataProvider?.limit > 20 ? 20 : dataProvider?.limit).fill({})
-    : dataProvider?.rows;
+  // Code executed at startup of component
   $: if (dataProvider?.rows && dataProvider?.rows.length > 0){
       handleData(dataProvider?.rows);
   } 
+  // Code executed on update of binded values
+  afterUpdate(() => {
+    if (dataProvider?.rows && dataProvider?.rows.length > 0){
+      handleData(dataProvider?.rows);
+    } 
+	});
 </script>
 
 {#if canBeDisplayed}
