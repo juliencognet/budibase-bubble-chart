@@ -120,7 +120,7 @@
   function handleData(rows){
     let index=0;
     options.series=[];
-    if (rows){
+    if (rows.length>0){
       for (const element of rows){
         try{
           // Manage serie if defined (else will be DEFAULT value)
@@ -150,12 +150,12 @@
     }
   }
   // Code executed at startup of component
-  $: if (dataProvider?.rows && dataProvider?.rows.length > 0){
+  $: if (dataProvider?.rows){
       handleData(dataProvider?.rows);
   } 
   // Code executed on update of binded values
   afterUpdate(() => {
-    if (dataProvider?.rows && dataProvider?.rows.length > 0){
+    if (dataProvider?.rows){
       handleData(dataProvider?.rows);
     } 
 	});
